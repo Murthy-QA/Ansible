@@ -2,13 +2,9 @@
   hosts: local
   connection: local
   vars:
-    number: 35
+    number: 12
   tasks:
-  - name: check number is even or odd
+  - name: check number is less than 10 or not
     ansible.builtin.debug:
-      msg: 
-      {% if number is divisible by 2 %}
-        "Given number {{ number }} is even number"
-      {% else %}
-        "Given number {{ number }} is odd number"
-      {% endif %}
+      msg: "Given number {{ number }} is less than 10"
+    when: number < 10
