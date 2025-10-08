@@ -1,7 +1,7 @@
-  - name: Install multiple packages
-    ansible.builtin.package:
-      name: "{{ item }}"
-      state: present
+- name: Install multiple packages
+  ansible.builtin.package:
+    name: "{{ item }}"
+    state: present
     loop:
       - httpd
       - mariadb-server
