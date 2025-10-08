@@ -4,7 +4,6 @@
       state: present
       loop: "{{ users_to_create }}"
       vars:
-        users_to_create:
-          - alice
-          - bob
-          - charlie
+        - alice
+        - bob
+        - charlie
