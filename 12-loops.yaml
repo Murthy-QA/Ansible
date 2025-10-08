@@ -12,6 +12,7 @@
 - name: create packages
   hosts: local
   connection: local
+  become: yes
   tasks:
   - name: Install packages
     ansible.builtin.package:
@@ -21,4 +22,3 @@
       - nginx
       - python3
       - mysql
-      
