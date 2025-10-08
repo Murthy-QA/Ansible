@@ -6,7 +6,7 @@
   - name: install mysql
     ansible.builtin.package:
       name: mysql
-      state: present
+      state: absent
 
   - name: start mysql
     ansible.builtin.service:
