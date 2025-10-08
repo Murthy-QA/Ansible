@@ -1,0 +1,10 @@
+- name: conditions
+  hosts: local
+  connection: local
+  vars:
+    number: 35
+  tasks:
+  - name: check number is even or odd
+    ansible.builtin.debug:
+      msg: "Given number {{ number }} is even number
+    when: number%2 = 0
