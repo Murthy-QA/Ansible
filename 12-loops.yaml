@@ -1,9 +1,9 @@
   - name: Create multiple users
-    ansible.builtin.user:
-      name: "{{ item }}"
-      state: present
-      loop: "{{ users_to_create }}"
-      vars:
-        - alice
-        - bob
-        - charlie
+    ansible.builtin.debug
+    name: "{{ item }}"
+    state: present
+    loop: "{{ users_to_create }}"
+    vars:
+      - alice
+      - bob
+      - charlie
