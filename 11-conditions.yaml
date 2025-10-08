@@ -6,5 +6,9 @@
   tasks:
   - name: check number is even or odd
     ansible.builtin.debug:
-      msg: "Given number {{ number }} is even number"
-    when: number%2 = 0
+      msg: 
+      {% if number is divisible by 2 %}
+        "Given number {{ number }} is even number"
+      {% else %}
+        "Given number {{ number }} is odd number"
+      {% endif %}
