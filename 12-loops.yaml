@@ -1,9 +1,8 @@
-  - name: Create multiple users
-    ansible.builtin.debug
-    name: "{{ item }}"
-    state: present
-    loop: "{{ users_to_create }}"
-    vars:
-      - alice
-      - bob
-      - charlie
+  - name: Install multiple packages
+    ansible.builtin.package:
+      name: "{{ item }}"
+      state: present
+    loop:
+      - httpd
+      - mariadb-server
+      - php
