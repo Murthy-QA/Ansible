@@ -1,0 +1,8 @@
+---
+- name: Install apache server
+  hosts: local
+  connection: local
+  become: true
+  tasks:
+  - name: Install apache
+    ansible.builtin.command: dnf install apache   
