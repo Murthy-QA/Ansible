@@ -1,8 +1,8 @@
 ---
-- name: Install apache server
+- name: Install nginxe server
   hosts: local
   connection: local
   become: true
   tasks:
-  - name: Install apache
-    ansible.builtin.command: dnf install apache   
+  - name: Install nginx
+    ansible.builtin.command: dnf install nginx 
